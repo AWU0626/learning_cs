@@ -1,8 +1,8 @@
-#ifdef LINEARSEARCH_H
+#ifndef LINEARSEARCH_H
 #define LINEARSEARCH_H
 
 
-int LinearSearch(int[] arr, int target);
+int LinearSearch(int arr[], int size, int target);
 
 
 #endif
