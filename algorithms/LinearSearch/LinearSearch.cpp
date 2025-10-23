@@ -1,16 +1,22 @@
 #include <iostream>
-#include <sys/wait.h>
+#include <vector>
+#include <cstdlib>
 #include "LinearSearch.h"
 
 using namespace std;
 
 int main() {
-	cout << "hi" << endl;
+	int target = 10;
+	vector<int> arr{1, 2, 3, 4, 5, 6, 7, 8, 9};
+
+	int result = LinearSearch(arr, target);
+	cout << "static result at index: " << result << endl;
+
 	return 0;
 }
 
-int LinearSearch(int arr[], int size, int target) {
-	for (int i = 0; i < size; i++) {
+int LinearSearch(vector<int>& arr, int target) {
+	for (int i = 0; i < arr.size(); i++) {
 		// return index if the array if found
 		if (arr[i] == target) return i;
 	}
